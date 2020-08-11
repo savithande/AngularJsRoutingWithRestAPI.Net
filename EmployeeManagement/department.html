@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+
+    <title>employeeManagement</title>
+
+    <script src="js/app.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+
+<body  ng-controller = "departmentDetailsController">
+
+    <h3>Welcome to Department Page</h3>
+
+    <p ng-if="employeeDetails.count==0">No departs found</p>
+
+    <table border="1px block solid">
+        <tr ng-repeat="departs in departmentDetails">
+            <td>{{departs.deptId}}</td>
+            <td>{{departs.deptName}}</td>
+            <td>{{departs.numOfEmployees}}</td>
+            
+        </tr>
+    </table>
+</body>
+</html>

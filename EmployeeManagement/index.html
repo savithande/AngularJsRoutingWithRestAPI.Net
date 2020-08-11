@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-sanitize.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <title>employeeManagement</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <script src="js/app.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <header>
+        <h3>
+            welcome to employee page
+        </h3>
+        <ul>
+            <li><a href="#!index">Home</a></li>
+            <li><a  href="#!employee">Employees</a></li>
+            <li><a href="#!department">Department</a></li>
+        </ul>
+    </header>
+    <div class="content">
+        <div ng-view></div>
+
+    </div>
+    <script src="js/employeeController.js"></script>
+    <script src="js/departmentController.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="employeeDetail">
+    <Key>
+      <PropertyRef Name="empId" />
+    </Key>
+    <Property Name="empId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="empName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="empSalary" Type="Int32" />
+    <Property Name="empPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="EmployeeDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="employeeDetails" EntityType="Self.employeeDetail" />
+    <EntitySet Name="departmentDetails" EntityType="EmployeeModel.departmentDetail" />
+  </EntityContainer>
+  <EntityType Name="departmentDetail">
+    <Key>
+      <PropertyRef Name="deptId" />
+    </Key>
+    <Property Name="deptId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="deptName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="numOfEmployees" Type="Int32" />
+  </EntityType>
+</Schema>
